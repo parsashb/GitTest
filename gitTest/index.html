@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #344c64;
+        margin: 0;
+        padding: 10px;
+      }
+      nav {
+        padding: 20px;
+        border-radius: 0.5rem;
+        background-color: #eaedf0ea;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 350px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      p {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+      .input-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      input {
+        flex: 1;
+        padding: 7px;
+        font-size: 1rem;
+      }
+      #btn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        font-size: 1.2rem;
+      }
+      #create {
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 0.5rem;
+        border: none;
+        background-color: rgb(104, 104, 104);
+        color: white;
+        margin-top: 15px;
+        font-size: 1rem;
+      }
+      h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(44, 194, 44);
+        position: fixed;
+        padding: 10px 20px;
+        border-radius: 0.75rem;
+        color: white;
+        top: 10px;
+        right: 30px;
+        transform: translateX(250px);
+        opacity: 0;
+        transition: all 0.5s ease;
+      }
+      .true {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      @media (max-width: 400px) {
+        nav {
+          max-width: 100%;
+        }
+        h3 {
+          font-size: 0.9rem;
+          top: 5px;
+          right: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <p>Random Password Generator</p>
+      <div class="input-container">
+        <input type="text" id="input" readonly />
+        <button id="btn" class="far fa-copy"></button>
+      </div>
+      <button id="create">Generate</button>
+    </nav>
+    <h3>Password Copied</h3>
+    <script src="password.js"></script>
+  </body>
+</html>
