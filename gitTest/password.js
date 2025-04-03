@@ -2,7 +2,11 @@ const btn = document.getElementById("create");
 const input = document.getElementById("input");
 const copy = document.getElementById("btn");
 const h3 = document.querySelector("h3");
-btn.addEventListener("click", function () {
+btn.addEventListener("click", clikStart);
+btn.addEventListener("touchstart", clikStart);
+copy.addEventListener("click", copyPass);
+copy.addEventListener("touchstart", copyPass);
+function clikStart() {
   let pass =
     "0123456789abcdefghijklmnopqrstuvwxtz!@#$%^&*()_+?:{}[]ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let password = "";
@@ -11,8 +15,9 @@ btn.addEventListener("click", function () {
     password += pass[random];
     input.value = password;
   }
-});
-copy.addEventListener("click", function () {
+}
+
+function copyPass() {
   if (input.value.length > 13) {
     h3.classList.add("true");
     setTimeout(() => {
@@ -20,4 +25,4 @@ copy.addEventListener("click", function () {
     }, 2000);
     navigator.clipboard.writeText(input.value);
   } else alert("must click on the Generate Button!");
-});
+}
