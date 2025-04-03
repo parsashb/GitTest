@@ -2,7 +2,7 @@ const btn = document.getElementById("create");
 const input = document.getElementById("input");
 const copy = document.getElementById("btn");
 const h3 = document.querySelector("h3");
-btn.addEventListener("touchstart", clickedStart);
+btn.addEventListener("touchend", clickedStart);
 btn.addEventListener("click", clickedStart);
 copy.addEventListener("click", copyPass);
 copy.addEventListener("touchstart", copyPass);
