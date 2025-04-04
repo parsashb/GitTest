@@ -9,7 +9,7 @@ copy.addEventListener("touchstart", copyPass);
 
 function clickedStart() {
   let pass =
-    "0123456789abcdefghijklmnopqrstuvwxtz!@#$%^&*()_+?:{}[]ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    "0123456789abcdefghijklmnopqrstuvwxtz!@#$%^~&*()_+?:{}[]ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let password = "";
   for (let i = 0; i < 14; i++) {
     let random = Math.floor(Math.random() * pass.length);
@@ -23,7 +23,7 @@ function copyPass() {
     h3.classList.add("true");
     setTimeout(() => {
       h3.classList.remove("true");
-    }, 2000);
+    }, 1500);
     navigator.clipboard.writeText(input.value);
-  } else alert("must click on the Generate Button!");
+  } else alert(" You need to click the Generate button first! ");
 }
