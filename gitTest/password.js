@@ -2,10 +2,6 @@ const btn = document.getElementById("create");
 const input = document.getElementById("input");
 const copy = document.getElementById("btn");
 const h3 = document.querySelector("h3");
-btn.addEventListener("touchend", clickedStart);
-btn.addEventListener("click", clickedStart);
-copy.addEventListener("click", copyPass);
-copy.addEventListener("touchstart", copyPass);
 
 function clickedStart() {
   let pass =
@@ -27,3 +23,9 @@ function copyPass() {
     navigator.clipboard.writeText(input.value);
   } else alert(" You need to click the Generate button first! ");
 }
+
+btn.addEventListener("touchend", clickedStart);
+btn.addEventListener("click", clickedStart);
+
+copy.addEventListener("click", copyPass);
+copy.addEventListener("touchstart", copyPass);
