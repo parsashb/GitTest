@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif, cursive;
+}
+div {
+  background-color: #fdd1d2;
+  height: 320px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.imgha {
+  height: 12.5rem;
+  width: 12.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+h2 {
+  margin-top: 81.25px;
+  font-size: 25px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #919191;
+  font-weight: 100;
+  margin-top: 12px;
+}
+
+main {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-left: 1.2rem;
+}
+
+#div1 {
+  height: 220px;
+  margin-top: 16%;
+}
+.divha {
+  height: 2px;
+}
